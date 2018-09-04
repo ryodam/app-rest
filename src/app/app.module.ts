@@ -10,6 +10,10 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { HttpClientModule } from '@angular/common/http';
+
+import { ListService } from '../pages/list/list.service';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -18,6 +22,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
@@ -29,6 +34,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage
   ],
   providers: [
+    ListService,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

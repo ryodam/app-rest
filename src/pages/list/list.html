@@ -9,12 +9,12 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon name="{{item.icon}}" item-left></ion-icon>
+    <div ion-item *ngFor="let item of items">
+      <!-- <ion-icon name="{{item.icon}}" item-left></ion-icon> -->
       {{item.title}}
       <div class="item-note" item-right>
-        {{item.note}}
+        <button (click)="cambiarEstadoTodo(item.id, item.finished)" ion-button color="secondary">{{ item.finished ? 'Finalizado' : 'Finalizar' }}</button>
       </div>
-    </button>
+    </div>
   </ion-list>
 </ion-content>
