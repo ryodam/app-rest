@@ -10,11 +10,11 @@
 <ion-content>
   <ion-list>
     <div ion-item *ngFor="let item of items">
-      <!-- <ion-icon name="{{item.icon}}" item-left></ion-icon> -->
-      {{item.title}}
+      <todo [todo]="item"></todo>
+      <!-- {{item.title}}
       <div class="item-note" item-right>
         <button (click)="cambiarEstadoTodo(item.id, item.finished)" ion-button color="secondary">{{ item.finished ? 'Finalizado' : 'Finalizar' }}</button>
-      </div>
+      </div> -->
     </div>
   </ion-list>
 </ion-content>

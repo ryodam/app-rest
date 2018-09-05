@@ -1,0 +1,10 @@
+<!-- Generated template for the TodoComponent component -->
+
+<div class="container">
+  <div class="container-item">
+      {{todo.title}}
+  </div>
+  <div>
+      <button (click)="cambiarEstadoTodo(todo.id, todo.finished)" ion-button color="secondary">{{ todo.finished ? 'Finalizado' : 'Finalizar' }}</button>
+  </div>
+</div>
